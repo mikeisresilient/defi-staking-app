@@ -4,7 +4,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { BlockchainProvider } from './contexts/BlockchainContext';
+
+ReactDOM.render(
+  <BlockchainProvider>
+    <App />
+  </BlockchainProvider>,
+  document.getElementById('root')
+);
 
 
 // If you want your app to work offline and load faster, you can change
