@@ -48,14 +48,14 @@ contract DecentralBank {
         // require the amount to be greater than zero
         require (balance > 0, 'staking balance cant be less than 0');
 
-        // transfer the tokens to the specified contract address from our bank
-        tether.transfer(msg.sender, balance);
-
         // reset staking balance
         stakingBalance[msg.sender] = 0;
 
         // update staking status
         isStaking[msg.sender] = false;
+
+        // transfer the tokens to the specified contract address from our bank
+        tether.transfer(msg.sender, balance);
 
     }
 
