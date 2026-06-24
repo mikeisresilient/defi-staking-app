@@ -7,4 +7,4 @@ services:
     startCommand: npx serve -s build
     envVars:
       - key: NODE_VERSION
-        value: 16
+        value: 18
